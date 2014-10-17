@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/15.0">
+	<id>com.mesmotronic.ane.androidid</id>
+	<versionNumber>1.0.0</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>android-id-jar.jar</nativeLibrary>
+				<initializer>com.mesmotronic.ane.androidid.AndroidIdExtension</initializer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-x86">
+			<applicationDeployment>
+				<nativeLibrary>android-id-jar.jar</nativeLibrary>
+				<initializer>com.mesmotronic.ane.androidid.AndroidIdExtension</initializer>
+			</applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>
