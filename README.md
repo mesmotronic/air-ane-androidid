@@ -3,7 +3,8 @@ Android ID ANE
 
 Enables Adobe AIR to access ANDROID_ID. That's it.
 
-**app.xml:**
+app.xml
+-------
 
 ```
 <extensions>
@@ -11,7 +12,8 @@ Enables Adobe AIR to access ANDROID_ID. That's it.
 </extensions>
 ``` 
 
-**ActionScript:**
+ActionScript
+------------
 
 ```actionscript
 import com.mesmotronic.ane.AndroidID;
