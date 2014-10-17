@@ -34,6 +34,9 @@ package com.mesmotronic.ane
 	
 	public class AndroidID
 	{
+		static private var _androidId:String = '';
+		static private var context:ExtensionContext;
+		
 		// Static initializer
 		{
 			init();
@@ -42,9 +45,12 @@ package com.mesmotronic.ane
 		static private function init():void
 		{
 			context = ExtensionContext.createExtensionContext('com.mesmotronic.ane.androidid', '');
+			
+			if (!!context)
+			{
+				_androidId = context.call('getAndroidId') as String;
+			}
 		}
-		
-		static private var context:ExtensionContext;
 		
 		static public function get isSupported():Boolean
 		{
@@ -57,8 +63,7 @@ package com.mesmotronic.ane
 		 */
 		static public function get ANDROID_ID():String
 		{
-			if (!context) return '';
-			return context.call('getAndroidId') as String;
+			return _androidId;
 		}
 	}
 }
